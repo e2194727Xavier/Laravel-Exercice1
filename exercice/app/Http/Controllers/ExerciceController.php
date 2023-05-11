@@ -7,15 +7,21 @@ use Illuminate\Http\Request;
 class ExerciceController extends Controller
 {
     public function index(){
-        return view('index');
+        return view("home");
     }
-    public function index(){
-        return view('index');
+    public function resume(){
+        return view('resume');
     }
-    public function index(){
-        return view('index');
+    public function projects(){
+        return view('projects');
     }
-    public function index(){
-        return view('index');
+    public function contact(){
+        return view('contact');
+    }
+    public function contactForm(Request $request){
+      
+        return view ('contact', [
+            'data' => $request
+        ]);
     }
 }
